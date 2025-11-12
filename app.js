@@ -20,6 +20,9 @@ const winningConitions = [
     [2, 4, 6]
 ]
 
+const clickSound = new Audio('./SOund/switch.wav');
+const winSound = new Audio('./SOund/win.mp3');
+
 const toggleTurn = (val1, val2) => {
     players[0].classList[val1]("active");
     players[1].classList[val2]("active");
@@ -87,6 +90,9 @@ const handleXorO = () => {
 // Handeling X or O
 gameBox.addEventListener('click', (event) => {
     if(!isWin){
+        clickSound.play();
+        clickSound.currentTime = 0;
+
         let targetBox = event.target.closest('.boxes');
         let boxId = Number(event.target.getAttribute("id"));
 
@@ -97,16 +103,18 @@ gameBox.addEventListener('click', (event) => {
             gameLength++;
         }
         
-    if(gameLength > 2){
-        winningConitions.forEach((pattern) => {
+        if(gameLength > 2){
+            winningConitions.forEach((pattern) => {
                 if(gameIndex[pattern[0]] && gameIndex[pattern[0]] === gameIndex[pattern[1]] 
                     && gameIndex[pattern[1]] === gameIndex[pattern[2]]){
                     isWin = true;
                     patternLine(pattern);
                     showWinner(gameIndex[pattern[0]]);
                     toggleTurn("remove", "remove");
+                    winSound.play();
+                    winSound.currentTime = 0;
                 }
-        })
+            })
         }
     }
 });
