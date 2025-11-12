@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tic-Tac-Toe</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <main>
+        <nav id="navbar">
+            <h1>Tic-Tac-Toe</h1>
+        </nav>
+
+        
+        <div class="top">
+            <div class="winner-box ">
+                Winner
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="players playerX active">
+                <img src="./x.png" alt="PlayerX">
+                <p>Player X's Turn</p>
+            </div>
+        
+            <div class="container">
+                
+                <div class="gameBox">
+                    <span class="winningLine hide"></span>
+
+                    <div class="first">
+                        <button class="boxes" id="0"></button>
+                        <button class="boxes" id="1"></button>
+                        <button class="boxes" id="2"></button>
+                    </div>
+                    <div class="second">
+                        <button class="boxes" id="3"></button>
+                        <button class="boxes" id="4"></button>
+                        <button class="boxes" id="5"></button>
+                    </div>
+                    <div class="third">
+                        <button class="boxes" id="6"></button>
+                        <button class="boxes" id="7"></button>
+                        <button class="boxes" id="8"></button>
+                    </div>
+                </div>
+
+                <button id="reset">Reset</button>
+            </div>
+
+            <div class="players playerO">
+                <img src="./o.png" alt="PlayerO">
+                <p>Player O's Turn</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script defer src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0d1643;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.winningLine{
+    content: "";
+    height: 21.5rem;
+    width: .7rem;
+    background-color: rgba(0, 255, 0, 0.5);
+    border-radius: 6px;
+    position: relative;
+    top: .35rem;
+    left: 4.51rem;
+    z-index: 1;
+    box-shadow:
+        0 0 5px rgba(0, 255, 0, 0.5), 
+        0 0 15px rgba(0, 255, 0, 0.5), 
+        0 0 1px rgba(0, 255, 0, 0.5), 
+        0 0 85px rgba(0, 255, 0, 0.5); 
+}
+
+.hide{
+    display: none;
+}
+
+#navbar{
+    background-color: #1a2350;
+    padding: 1rem;
+    text-align: center;
+    min-width: 100%;
+}
+
+#navbar h1{
+    font-size: 3.5rem;
+}
+
+.winner-box{
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 700;
+    background-color: green;
+    color: black;
+    padding: .5rem;
+}
+
+.players{
+    position: absolute;
+    top: 24rem;
+    border: 3px solid #0d2e5e;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 700;
+    transition: box-shadow 0.5s ease;
+}
+
+.active{
+    box-shadow: 0 0 25px 7px #406e55;
+}
+
+.playerX{
+    left: 2rem;
+}
+.playerO{
+    right: 2rem;
+}
+
+.players img{
+    height: 8rem;
+    width: 100%;
+    margin-bottom: .6rem;
+}
+
+.players p{
+    padding: .6rem 1rem;
+    font-size: 1.4rem;
+}
+
+.container{
+    margin-top: 1.4rem;
+    width: 70%;
+    min-width: 400px;
+    text-align: center;
+    height: 23rem;
+}
+
+.bottom{
+    position: relative;
+    display: flex;
+    height: 80%;
+    padding: 1rem;
+    width: 100%;
+    max-width: 950px;
+    justify-content: center;
+    text-align: center;
+    gap: 10rem;
+}
+
+.gameBox{
+    height: 100%;
+    display: flex;
+    gap: .6rem;
+    justify-content: center; 
+}
+
+.boxes{
+    padding: .8rem;
+    margin-bottom: 10px;
+    transition: all linear 0.2s;
+    background-color: #0d2e5e;
+    height: 7rem;
+    width: 7rem;
+    font-size: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxes:hover{
+    box-shadow: -1px 1px 12px rgb(53, 77, 148);
+    transform: scale(1.02);
+}
+
+#reset{
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: #1a2350;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.boxes, #reset{
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #284a87;
+    color: white;
+}
