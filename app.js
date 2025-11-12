@@ -20,7 +20,7 @@ const winningConitions = [
     [2, 4, 6]
 ]
 
-const clickSound = new Audio('./switch.wav');
+const clickSound = new Audio('./click.wav');
 const winSound = new Audio('./win.mp3');
 
 const toggleTurn = (val1, val2) => {
