@@ -7,7 +7,7 @@ This project combines a fun cartoon aesthetic, glowing animations, and responsiv
 
 ## 🖼️ Game Preview
 
-![Tic-Tac-Toe Screenshot](./game/image.png);
+![Tic-Tac-Toe Screenshot](./image.png);
 
 ---
 
