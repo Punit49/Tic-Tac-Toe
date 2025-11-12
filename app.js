@@ -20,8 +20,8 @@ const winningConitions = [
     [2, 4, 6]
 ]
 
-const clickSound = new Audio('./SOund/switch.wav');
-const winSound = new Audio('./SOund/win.mp3');
+const clickSound = new Audio('./switch.wav');
+const winSound = new Audio('./win.mp3');
 
 const toggleTurn = (val1, val2) => {
     players[0].classList[val1]("active");
